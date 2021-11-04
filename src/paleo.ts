@@ -1,5 +1,7 @@
 /** A tuples array that map from Hebrew letter to its Paleo-Hebrew equivalent. */
 const he2paleo: [string, string][] = [
+	// Despite that your editor is probably showing you the tuples have the Paleo-Hebrew letter first,
+	// it's really the Hebrew letter that comes first (the whole text inside the brackets is RTL).
 	["א", "𐤀"],
 	["ב", "𐤁"],
 	["ג", "𐤂"],
