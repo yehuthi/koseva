@@ -1,0 +1,24 @@
+{
+	"name": "koseva",
+	"version": "1.0.0",
+	"private": true,
+	"description": "Paleo-Hebrew browser extension.",
+	"scripts": {
+		"test": "ts-mocha 'test/**/*.ts'",
+		"build": "rollup --config",
+		"clean": "rimraf dist/"
+	},
+	"devDependencies": {
+		"@ampproject/rollup-plugin-closure-compiler": "^0.27.0",
+		"@rollup/plugin-node-resolve": "^13.0.6",
+		"@rollup/plugin-typescript": "^8.3.0",
+		"@types/mocha": "^9.0.0",
+		"mocha": "^8.4.0",
+		"rimraf": "^3.0.2",
+		"rollup": "^2.59.0",
+		"rollup-plugin-copy": "^3.4.0",
+		"rollup-plugin-terser": "^7.0.2",
+		"title-case": "^3.0.3",
+		"ts-mocha": "^8.0.0"
+	}
+}
