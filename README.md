@@ -12,11 +12,15 @@ A browser extension that changes text in Hebrew script to Paleo-Hebrew script.
 
 ## Installation
 
+Download the latest [release](https://github.com/yehuthi/koseva/releases), extract the archive to a folder where you will keep it, and load it according to your browser <sup>[\[Chrome\]](https://developer.chrome.com/docs/extensions/mv3/getstarted/#:~:text=Open%20the%20Extension,the%20extension%20directory.)</sup><sup>[\[Firefox\]](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension#installing)</sup><sup>[\[Edge\]](https://docs.microsoft.com/en-us/microsoft-edge/extensions-chromium/getting-started/extension-sideloading)</sup>.
+
+To build from source clone and run:
+
 ```shell
 npm i && npm run build
 ```
 
-And load the extension that will wait for you at `/dist` normally, according to your browser <sup>[\[Chrome\]](https://developer.chrome.com/docs/extensions/mv3/getstarted/#:~:text=Open%20the%20Extension,the%20extension%20directory.)</sup><sup>[\[Firefox\]](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension#installing)</sup><sup>[\[Edge\]](https://docs.microsoft.com/en-us/microsoft-edge/extensions-chromium/getting-started/extension-sideloading)</sup>.
+Then load the extension that will wait for you at `/dist` normally.
 
 ## Usage
 
