@@ -25,4 +25,6 @@ Once installed, the extension always runs, as long as it's permitted to.
 This is not recommended as it can get intrusive on performance and also break some sites (but feel free to experiment). It's generally better to only allow the extension to run on-demand.
 E.g. in Microsoft Edge this is done by right-click on its symbol in the toolbar and select "This can read and change site data" → "When you click the extension".
 
-![Edge extension activation options](doc/koseva-edge.png)
+<p align="center">
+	<img alt="Edge extension activation options" src="doc/koseva-edge.png" align=center />
+</p>
