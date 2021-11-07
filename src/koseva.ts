@@ -1,4 +1,4 @@
-import * as paleo from "./paleo";
+import he2paleo from "he2paleo";
 import type { Ring } from "./ring";
 import * as ring from "./ring";
 
@@ -6,7 +6,7 @@ import * as ring from "./ring";
 function convertInNode(element: Node) {
 	if (element instanceof Text) {
 		if (element.textContent)
-			element.textContent = paleo.convert(element.textContent);
+			element.textContent = he2paleo(element.textContent);
 	} else {
 		element.childNodes.forEach(convertInNode);
 	}

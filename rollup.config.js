@@ -1,8 +1,9 @@
 import { terser } from "rollup-plugin-terser";
-import copy from 'rollup-plugin-copy';
-import typescript from '@rollup/plugin-typescript';
-import compiler from '@ampproject/rollup-plugin-closure-compiler';
-import { nodeResolve } from '@rollup/plugin-node-resolve';
+import copy from "rollup-plugin-copy";
+import typescript from "@rollup/plugin-typescript";
+import compiler from "@ampproject/rollup-plugin-closure-compiler";
+import { nodeResolve } from "@rollup/plugin-node-resolve";
+import commonjs from "@rollup/plugin-commonjs";
 import pkg from "./package.json";
 import { titleCase } from "title-case";
 
@@ -21,18 +22,23 @@ export default {
 	input: "src/koseva.ts",
 	output: {
 		file: `dist/${bundleName}.js`,
-		format: 'cjs',
-		plugins: [terser()]
+		format: "cjs",
+		plugins: [terser()],
 	},
 	plugins: [
 		nodeResolve(),
+		commonjs(),
 		typescript(),
 		compiler({ compilation_level: "ADVANCED" }),
 		copy({
 			targets: [
-				{ src: "static/manifest.json", dest: "dist/", transform: patchManifest },
+				{
+					src: "static/manifest.json",
+					dest: "dist/",
+					transform: patchManifest,
+				},
 				{ src: "static/**/*.png", dest: "dist/" },
 			],
 		}),
 	],
-}
+};
