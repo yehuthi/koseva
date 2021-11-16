@@ -3,6 +3,8 @@
 	"version": "1.0.1",
 	"private": true,
 	"description": "Paleo-Hebrew browser extension.",
+	"author": "Yehuthith <yehuthitnpm@gmail.com> (https://github.com/yehuthi)",
+	"repository": "github:yehuthi/koseva",
 	"scripts": {
 		"test": "ts-mocha 'test/**/*.ts'",
 		"build": "rollup --config",
