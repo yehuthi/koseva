@@ -7,6 +7,7 @@
 ## Version 2.0.0
 
 - Improve activation.
+- Regresses on manifest v2, implying it will not work on e.g. Firefox.
 
 ## Version 1.0.1
 
