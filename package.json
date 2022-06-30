@@ -3,7 +3,7 @@
 	"version": "2.0.1",
 	"private": true,
 	"description": "Paleo-Hebrew browser extension.",
-	"author": "Yehuthith <yehuthitnpm@gmail.com> (https://github.com/yehuthi)",
+	"author": "Yehuthith <yehuthith@gmail.com> (https://github.com/yehuthi)",
 	"repository": "github:yehuthi/koseva",
 	"scripts": {
 		"test": "ts-mocha 'test/**/*.ts'",
