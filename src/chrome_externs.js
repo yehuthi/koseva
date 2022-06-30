@@ -2,7 +2,11 @@ const chrome = {};
 
 chrome.action = {};
 chrome.action.onClicked = {};
-chrome.action.onClicked = function (tab) {};
+chrome.action.onClicked.addListener = function (tab) {};
+
+chrome.browserAction = {};
+chrome.browserAction.onClicked = {};
+chrome.browserAction.onClicked.addListener = function (tab) {};
 
 chrome.tabs = {};
 /** @type {number} */
