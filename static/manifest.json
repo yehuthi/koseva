@@ -9,5 +9,9 @@
 			"matches": ["<all_urls>"],
 			"js": [""]
 		}
-	]
+	],
+	"background": {
+		"service_worker": ""
+	},
+	"action": {}
 }

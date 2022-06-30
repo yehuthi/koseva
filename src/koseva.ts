@@ -71,5 +71,14 @@ function observe(root: Node) {
 	});
 }
 
-observe(document);
-convertInNode(document);
+const activate = (() => {
+	let active = false;
+	return () => {
+		if (active) return;
+		active = true;
+		observe(document);
+		convertInNode(document);
+	};
+})();
+
+chrome.runtime.onMessage.addListener(activate);
