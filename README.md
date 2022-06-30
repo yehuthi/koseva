@@ -26,3 +26,12 @@ Then load the extension that will wait for you at `/dist` normally.
 
 - Click the extension icon when you want it to run.
 - Refresh the page to remove its effects.
+
+## Build
+
+- Clone this repository
+- `npm i`
+- `npm run build`
+- Navigate to the new "dist" sub-directory.
+- A manifest-version 3 (Chrome, Edge) version will be in "v3".
+- A manifest-version 2 (Firefox) version will be in "v2".
