@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 2.0.2
+
+- Fix Twitter breakage.
+
 ## Version 2.0.1
 
 - Add Manifest v2 support (for e.g. Firefox).
