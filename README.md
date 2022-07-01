@@ -12,6 +12,20 @@ A browser extension that changes text in Hebrew script to Paleo-Hebrew script.
 
 ## Installation
 
+### Browser Extension Repositories
+
+<p align=center>
+  <a href="https://chrome.google.com/webstore/detail/cfmmdplbmnmbjdjjbnihnjldbckgeekc">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/Microsoft_Edge_logo_%282019%29.svg" alt="Microsoft Edge" width=64 height=64 />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Google_Chrome_icon_%28February_2022%29.svg" alt="Google Chrome" width=64 height=64 />
+  </a>
+  <a href="https://addons.mozilla.org/firefox/addon/koseva">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Firefox_logo%2C_2019.svg" alt="Mozilla Firefox" width=64 height=64 />
+  </a>
+</p>
+
+### Manual Installation
+
 Download the latest [release](https://github.com/yehuthi/koseva/releases), extract the archive to a folder where you will keep it, and load it according to your browser <sup>[\[Chrome\]](https://developer.chrome.com/docs/extensions/mv3/getstarted/#:~:text=Open%20the%20Extension,the%20extension%20directory.)</sup><sup>[\[Firefox\]](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension#installing)</sup><sup>[\[Edge\]](https://docs.microsoft.com/en-us/microsoft-edge/extensions-chromium/getting-started/extension-sideloading)</sup>.
 
 To build from source clone and run:
