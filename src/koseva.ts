@@ -26,3 +26,8 @@ const onActivate = (() => {
 })();
 
 chrome.runtime.onMessage.addListener(onActivate);
+
+chrome.storage.sync.get('activation', config => {
+	const activation = Object.values(config)[0]; // can't just read normally seemingly due to a browser bug.
+	if (activation === 'always') onActivate();
+})
