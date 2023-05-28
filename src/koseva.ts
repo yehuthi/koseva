@@ -25,9 +25,36 @@ const onActivate = (() => {
 	};
 })();
 
+function isHebrew(text: string): boolean {
+	for (let i = 0; i < text.length; i++) {
+		const c = text.charCodeAt(i);
+		if (0x0590 <= c && c <= 0x05FF) return true;
+	}
+	return false;
+}
+
+function isHebrewTextInPage(): boolean {
+	function checkNode(node: ChildNode): boolean {
+		if (node.textContent && isHebrew(node.textContent)) return true;
+		for (const child of node.childNodes) if (checkNode(child)) return true;
+		return false;
+	}
+	for (const node of document.childNodes) if (checkNode(node)) return true;
+	return false;
+}
+
+function isHebrewPage(): boolean {
+	return (
+		document.documentElement.lang === 'he' ||
+		isHebrew(document.title)               ||
+		isHebrewTextInPage()
+	);
+}
+
 chrome.runtime.onMessage.addListener(onActivate);
 
 chrome.storage.sync.get('activation', config => {
 	const activation = Object.values(config)[0]; // can't just read normally seemingly due to a browser bug.
-	if (activation === 'always') onActivate();
+	if ((activation === 'hebrew' && isHebrewPage()) || activation === 'always')
+		onActivate();
 })

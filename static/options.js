@@ -10,7 +10,7 @@ activationSelect.oninput = () => {
  * @param {'manual' | 'hebrew' | 'always' | undefined} activationMode 
  */
 function updateActivationSelect(activationMode) {
-    activationSelect.value = activationMode ?? 'manual';
+    activationSelect.value = activationMode ?? 'hebrew';
 }
 
 chrome.storage.sync.onChanged.addListener(e => {
