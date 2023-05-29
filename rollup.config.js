@@ -129,4 +129,36 @@ export default [
 			}),
 		],
 	},
+	{
+		input: "src/options.ts",
+		output: {
+			file: `dist/v2/options.js`,
+			plugins: [terser()]
+		},
+		plugins: [
+			nodeResolve(),
+			commonjs(),
+			typescript(),
+			compiler({
+				compilation_level: "ADVANCED",
+				externs: "src/chrome_externs.js",
+			}),
+		]
+	},
+	{
+		input: "src/options.ts",
+		output: {
+			file: `dist/v3/options.js`,
+			plugins: [terser()]
+		},
+		plugins: [
+			nodeResolve(),
+			commonjs(),
+			typescript(),
+			compiler({
+				compilation_level: "ADVANCED",
+				externs: "src/chrome_externs.js",
+			}),
+		]
+	}
 ];
