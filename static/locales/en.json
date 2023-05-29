@@ -1,0 +1,8 @@
+{
+    "always": { "message": "Always"},
+    "hebrew": { "message": "Hebrew"},
+    "manual": { "message": "Manual"},
+    "always_desc": { "message": "activate on every page"},
+    "hebrew_desc": { "message": "activate on pages that seem to have Hebrew"},
+    "manual_desc": { "message":"only activate on extension button click" }
+}

@@ -20,5 +20,6 @@
 		"page": "options.html",
 		"open_in_tab": false
 	},
-	"permissions": ["storage"]
+	"permissions": ["storage"],
+	"default_locale": "en"
 }

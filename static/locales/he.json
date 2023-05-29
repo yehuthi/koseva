@@ -1,0 +1,8 @@
+{
+    "always": { "message": "תמיד"},
+    "hebrew": { "message": "עברית"},
+    "manual": { "message": "ידני"},
+    "always_desc": { "message": "פעיל בכל דף"},
+    "hebrew_desc": { "message": "מפעיל בדף שעברית נראית"},
+    "manual_desc": { "message": "נפעל מלחיצת כפתור התוסף" }
+}

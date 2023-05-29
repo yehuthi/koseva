@@ -38,3 +38,12 @@ chrome.storage.sync.onChanged = {};
  * @param {(changes: { newValue?: unknown, oldValue?: unknown }) => void} callback 
  */
 chrome.storage.sync.onChanged.addListener = function (callback) { };
+
+chrome.i18n = {};
+/**
+ * 
+ * @param {string} messageName 
+ * @param {string | string[]} substitutions 
+ * @returns string
+ */
+chrome.i18n.getMessage = function (messageName, substitutions) { }

@@ -112,6 +112,12 @@ function buildRollup(build) {
 				compilation_level: "ADVANCED",
 				externs: "src/chrome_externs.js",
 			}),
+			copy({
+				targets: [
+					{ src: "static/locales/en.json", dest: `${output_dir}/_locales/en/`, rename: 'messages.json' },
+					{ src: "static/locales/he.json", dest: `${output_dir}/_locales/he/`, rename: 'messages.json' },
+				],
+			}),
 		]
 	}];
 }
