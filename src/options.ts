@@ -5,6 +5,7 @@ const activationSelect = document.getElementById('activationSelect') as HTMLSele
 
 activationSelect.append(...['always', 'hebrew', 'manual'].map(value => {
     const option = document.createElement('option');
+    option.value = value;
     option.textContent = chrome.i18n.getMessage(value);
     option.title = chrome.i18n.getMessage(`${value}_desc`);
     return option;
