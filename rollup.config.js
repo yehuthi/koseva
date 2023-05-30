@@ -4,11 +4,15 @@ import typescript from "@rollup/plugin-typescript";
 import compiler from "@ampproject/rollup-plugin-closure-compiler";
 import { nodeResolve } from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
-import pkg from "./package.json";
+import pkg from "./package.json" assert { type: 'json' };
 import { titleCase } from "title-case";
 
 const bundleName = "koseva";
 const bg_script_name = `${bundleName}.bg.js`;
+/**
+ * @type {'SIMPLE' | 'ADVANCED'}
+ */
+const compilation_level = 'SIMPLE';
 
 /**
  * @typedef Build
@@ -65,7 +69,7 @@ function buildRollup(build) {
 			commonjs(),
 			typescript(),
 			compiler({
-				compilation_level: "ADVANCED",
+				compilation_level,
 				externs: "src/chrome_externs.js",
 			}),
 			copy({
@@ -93,7 +97,7 @@ function buildRollup(build) {
 			commonjs(),
 			typescript(),
 			compiler({
-				compilation_level: "ADVANCED",
+				compilation_level,
 				externs: "src/chrome_externs.js",
 			}),
 		],
@@ -109,7 +113,7 @@ function buildRollup(build) {
 			commonjs(),
 			typescript(),
 			compiler({
-				compilation_level: "ADVANCED",
+				compilation_level,
 				externs: "src/chrome_externs.js",
 			}),
 			copy({
