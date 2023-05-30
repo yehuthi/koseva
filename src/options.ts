@@ -12,19 +12,9 @@ activationSelect.append(...['always', 'hebrew', 'manual'].map(value => {
 }));
 
 activationSelect.oninput = () => {
-    chrome.storage.sync.set({
-        [config.activation_storage_key]: activationSelect.value
-    });
+    config.set_activation_mode(activationSelect.value as Activation | null ?? config.activation_default);
 };
 
-function updateActivationSelect(activationMode?: Activation) {
-    activationSelect.value = activationMode ?? config.activation_default;
-}
-
-chrome.storage.sync.onChanged.addListener(e => {
-    const activation = e[config.activation_storage_key];
-    if (activation) updateActivationSelect(activation.newValue);
-});
-chrome.storage.sync.get([config.activation_storage_key], values => {
-    updateActivationSelect(values[config.activation_storage_key]);
+config.subscribe_activation_mode(activation => {
+    activationSelect.value = activation;
 });

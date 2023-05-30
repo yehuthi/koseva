@@ -6,3 +6,23 @@ export type Config = {
 };
 
 export const activation_storage_key: string = 'activation';
+
+export async function get_activation_mode(): Promise<Activation> {
+  return ((await chrome.storage.sync.get(activation_storage_key))[
+      activation_storage_key
+    ] as Activation | null) ?? activation_default;
+}
+
+export function subscribe_activation_mode(callback: (activation: Activation) => void): () => void {
+    const fn = (data: any) => {
+        const activation = data[activation_storage_key];
+        if (activation) callback(activation.newValue);
+    };
+    chrome.storage.sync.onChanged.addListener(fn);
+    get_activation_mode().then(callback);
+    return () => chrome.storage.sync.onChanged.removeListener(fn);
+}
+
+export async function set_activation_mode(activation: Activation) {
+    await chrome.storage.sync.set({ [activation_storage_key]: activation });
+}

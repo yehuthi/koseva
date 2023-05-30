@@ -54,8 +54,7 @@ function isHebrewPage(): boolean {
 
 chrome.runtime.onMessage.addListener(onActivate);
 
-chrome.storage.sync.get([config.activation_storage_key], ({ [config.activation_storage_key]: activation }) => {
-	activation = activation ?? config.activation_default;
+config.subscribe_activation_mode(activation => {
 	if ((activation === 'hebrew' && isHebrewPage()) || activation === 'always')
 		onActivate();
-})
+});
