@@ -7,10 +7,11 @@ export type Config = {
 
 export const activation_storage_key: string = 'activation';
 
-export async function get_activation_mode(): Promise<Activation> {
-  return ((await chrome.storage.sync.get(activation_storage_key))[
-      activation_storage_key
-    ] as Activation | null) ?? activation_default;
+export function get_activation_mode(): Promise<Activation> {
+    return new Promise(complete => 
+        chrome.storage.sync.get(activation_storage_key, ({ [activation_storage_key]: activation }) => {
+            complete(activation ?? activation_default)
+    }));
 }
 
 export function subscribe_activation_mode(callback: (activation: Activation) => void): () => void {
