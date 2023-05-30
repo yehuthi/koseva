@@ -1,4 +1,4 @@
-import { terser } from "rollup-plugin-terser";
+import terser from "@rollup/plugin-terser";
 import copy from "rollup-plugin-copy";
 import typescript from "@rollup/plugin-typescript";
 import compiler from "@ampproject/rollup-plugin-closure-compiler";
