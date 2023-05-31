@@ -47,5 +47,5 @@ Then load the extension that will wait for you at `/dist` normally.
 - `npm i`
 - `npm run build`
 - Navigate to the new "dist" sub-directory.
-- A manifest-version 3 (Chrome, Edge) version will be in "v3".
-- A manifest-version 2 (Firefox) version will be in "v2".
+- A manifest-version 3 build for Chrome and Edge will be in `v3`.
+- A manifest-version 2 build for Firefox will be in `v2-gecko`.
